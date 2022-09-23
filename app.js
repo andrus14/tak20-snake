@@ -1,10 +1,10 @@
-let snakeLocation = [[8, 5], [7, 5]];
+let snakeLocation = [[5, 8], [5, 7]];
 let direction = 'up';
 drawSnake();
 
 const intervalId = setInterval(() => {
-    if ( direction == 'up' && snakeLocation[0][0] != 0 ) {
-        snakeLocation.unshift([snakeLocation[0][0] - 1, snakeLocation[0][1]]);
+    if ( direction == 'up' && snakeLocation[0][1] != 0 ) {
+        snakeLocation.unshift([snakeLocation[0][0], snakeLocation[0][1] - 1]);
         snakeLocation.pop();
     }
     drawSnake();
